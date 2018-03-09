@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+	color: #35495e;
+	overflow-y: scroll;
+}
+
+a {
+	color: #35495e;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 105px 750px 105px;
+	grid-template-rows: 1fr 630px 1fr;
+	grid-template-areas:
+	". navigation ."
+	". materials ."
+	". footer .";
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	overflow-y: scroll;
+}
+
+.navigation {
+	grid-area: navigation;
+}
+
+nav {
+	margin: auto;
+}
+
+nav ul {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+}
+
+nav li {
+	display: inline-block;
+	font-size: 40px;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #35495e;
+}
+
+.logo {
+	float: left;
+	position: relative;
+}
+
+.navigation hr {
+	width: 100%;
+}
+
+.materials {
+	grid-area: materials;
+	align-self: center;
+	justify-self: center;
+}
+
+.materials h1 {
+	font-size: 58px;
+	font-family: 'Karla', sans-serif;
+	position: relative;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+.footer p{
+	float: right;
+	line-height: 20px;
+	color: #35495e;
+	position: relative;
+	left: 5px;
+	top: 2px;
+	vertical-align: middle;
+	font-size: 20px;
+}
+
+.footer nav {
+	line-height: 20px;
+}
+
+.footer nav ul {
+	text-align: right;
+	padding: 0;
+	list-style: none;
+	margin: 0 auto;
+}
+
+.footer nav li {
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+.footer nav li {
+	font-size: 20px;
+	margin-left: 20px;
+	-webkit-transform: perspective(1px) translateZ(0);
+  	transform: perspective(1px) translateZ(0);
+}
+
+.footer nav li:hover, .footer nav li:focus, .footer nav li:active {
+	-webkit-animation-name: hvr-pop;
+	animation-name: hvr-pop;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+::selection {
+	background: #2c3e50;
+	color: #ecf0f1;
+}
