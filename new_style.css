@@ -1,0 +1,28 @@
+
+h1 {
+ font-family: 'Open Sans', sans-serif;
+ font-size: 200%;
+}
+
+p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.about-padding {
+  padding: 10% 10%;
+}
+
+h1:after {
+   content: '';
+   display: block;
+   width: 190px;
+   height: 7px;
+   background-color: #000000 ;
+}
+
+.align {
+  padding-right: 50%;
+}
