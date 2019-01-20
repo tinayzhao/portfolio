@@ -1,18 +1,25 @@
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #3B3B3B;
+}
+
 
 h1 {
  font-family: 'Open Sans', sans-serif;
- font-size: 200%;
+ font-size: 230%;
 }
 
 p {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 150%;
 }
 
 .about-padding {
-  padding: 10% 10%;
+  padding: 10% 10% 30% 10%;
 }
 
 h1:after {
@@ -24,5 +31,122 @@ h1:after {
 }
 
 .align {
-  padding-right: 50%;
+  padding-right: 40%;
+}
+
+.page {
+    animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+    -o-animation: fadein 4s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-a:hover::after,
+.about-a:hover::before {
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+}
+
+.about-a::after,
+.about-a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    right: 0;
+    height: 10px;
+    bottom: 10px;
+    z-index: -1;
+}
+
+.about-a {
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+#cal {
+    color: #3B7EA1;
+}
+
+
+#cal::before {
+    -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: #7ebcf152;
+}
+
+#cal::after {
+    -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+}
+
+#cs61b {
+  color: #2F86EB;
+}
+
+#cs61b::before {
+    -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: #7ebcf152;
+}
+
+#cs61b::after {
+    -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+}
+
+#golden {
+  color: #FFAC3C;
+}
+
+#golden::before {
+    -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: #FFD7AC;
+}
+
+#golden::after {
+    -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+}
+
+#tea {
+  color: #83C868;
+}
+
+#tea::before {
+    -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: #e9f5e4;
+}
+
+#tea::after {
+    -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
 }
