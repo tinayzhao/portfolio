@@ -22,20 +22,28 @@ li {
   padding-left: 4%;
 }
 
+h3 {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 100%;
+  font-weight: 300;
+    float:right;
+    padding-right: 5%;
+}
+
 h1 {
  font-family: 'Open Sans', sans-serif;
  font-size: 230%;
 }
 
 p {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 150%;
 }
 
 .about-padding {
-  padding: 5% 10% 30% 10%;
+  padding: 4% 10% 4% 10%;
 }
 
 h1:after {
@@ -62,6 +70,8 @@ h1 {
     -moz-animation: fadein 6s; /* Firefox */
     -webkit-animation: fadein 6s; /* Safari and Chrome */
     -o-animation: fadein 6s; /* Opera */
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 @keyframes fadein {
     from {
@@ -197,7 +207,20 @@ header {
 }
 
 .about:hover {
-    cursor: pointer;
+  cursor: pointer;
+  -webkit-animation: bounce .3s infinite alternate;
+  -moz-animation: bounce .3s infinite alternate;
+  animation: bounce .3s infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  to { -webkit-transform: scale(1.2); }
+}
+@-moz-keyframes bounce {
+  to { -moz-transform: scale(1.2); }
+}
+@keyframes bounce {
+  to { transform: scale(1.2); }
 }
 
 
