@@ -6,55 +6,57 @@ a {
 }
 
 ul {
-font-family: 'Open Sans', sans-serif;
-list-style: none;
-float: right;
-padding-right: 5%;
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  float: right;
+  padding-right: 5%;
 }
 
 li {
-display: inline;
+  display: inline;
 
 }
 
 .top-bar {
-padding-top: 3%;
-padding-left: 4%;
+  padding-top: 3%;
+  padding-left: 4%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 h3 {
- font-family: 'Open Sans', sans-serif;
- font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
   font-weight: 300;
 }
 
 h1 {
-font-family: 'Open Sans', sans-serif;
-font-size: 230%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 230%;
 }
 
 h2 {
-font-family: 'Open Sans', sans-serif;
-font-size: 230%;
-padding:0px;
-margin:0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 230%;
+  padding:0px;
+  margin:0px;
 }
 
 h4 {
-font-family: 'Open Sans', sans-serif;
-font-size: 200%;
-font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 200%;
+  font-weight: 300;
 }
 
 p {
-font-family: 'Open Sans', sans-serif;
-font-style: normal;
-font-weight: 300;
-font-size: 150%;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 150%;
 }
 
 .about-padding {
-padding: 4% 10% 4% 10%;
+  padding: 4% 10% 4% 10%;
 }
 
 h1:after {
@@ -66,7 +68,7 @@ h1:after {
 }
 
 .align {
-padding-right: 40%;
+  padding-right: 40%;
 }
 
 h1 {
@@ -231,17 +233,17 @@ header {
 }
 
 .logo:hover {
-cursor: pointer;
--webkit-animation: bounce .3s infinite alternate;
--moz-animation: bounce .3s infinite alternate;
-animation: bounce .3s infinite alternate;
+  cursor: pointer;
+  -webkit-animation: bounce .3s infinite alternate;
+  -moz-animation: bounce .3s infinite alternate;
+  animation: bounce .3s infinite alternate;
 }
 
 .about:hover {
-cursor: pointer;
--webkit-animation: bounce .3s infinite alternate;
--moz-animation: bounce .3s infinite alternate;
-animation: bounce .3s infinite alternate;
+  cursor: pointer;
+  -webkit-animation: bounce .3s infinite alternate;
+  -moz-animation: bounce .3s infinite alternate;
+  animation: bounce .3s infinite alternate;
 }
 
 @-webkit-keyframes bounce {
@@ -255,8 +257,8 @@ to { transform: scale(1.2); }
 }
 
 .footer {
-position: fixed;
-bottom: 0;
-right: 20;
+  position: fixed;
+  bottom: 0;
+  right: 20;
 }
 
