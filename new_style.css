@@ -197,6 +197,19 @@ color: #062FAD;
   -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
 }
 
+#regenize {
+color: #2CBE76;
+}
+
+#regenize::before {
+  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: #C1F1D9;
+}
+
+#regenize::after {
+  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+}
+
 #tea {
 color: #83C868;
 }
