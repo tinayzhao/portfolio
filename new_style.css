@@ -144,10 +144,22 @@ h1 {
   transition: color 0.2s ease;
 }
 
+#lab126 {
+color: #FF9900;
+}
+
+#lab126::before {
+  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: #ffe0b3;
+}
+
+#lab126::after {
+  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+}
+
 #cal {
   color: #3B7EA1;
 }
-
 
 #cal::before {
   -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
