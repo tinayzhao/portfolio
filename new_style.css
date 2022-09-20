@@ -144,6 +144,19 @@ h1 {
   transition: color 0.2s ease;
 }
 
+#rubrik {
+color: #139cdb;
+}
+
+#rubrik::before {
+  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: #acd0e0;
+}
+
+#rubrik::after {
+  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+}
+
 #lab126 {
 color: #FF9900;
 }
