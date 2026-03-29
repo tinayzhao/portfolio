@@ -1,20 +1,22 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #3B3B3B;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 a {
   position: relative;
   display: inline-block;
   text-decoration: none;
   color: #3B3B3B;
-}
-
-ul {
-  font-family: 'Open Sans', sans-serif;
-  list-style: none;
-  float: right;
-  padding-right: 5%;
-}
-
-li {
-  display: inline;
-
 }
 
 .top-bar {
@@ -24,101 +26,72 @@ li {
   margin-right: 0;
 }
 
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 230%;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  display: inline-block;
+}
+
 h3 {
   font-family: 'Open Sans', sans-serif;
   font-size: 100%;
   font-weight: 300;
 }
 
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 230%;
-}
-
-h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 230%;
-  padding:0px;
-  margin:0px;
-}
-
-h4 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 200%;
-  font-weight: 300;
-}
-
 p {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 150%;
+  line-height: 1.6;
 }
 
 .about-padding {
   padding: 4% 10% 4% 10%;
 }
 
-h1:after {
- content: '';
- display: block;
- width: 215px;
- height: 7px;
- background-color: #000000 ;
+h1::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #3B3B3B;
+  margin-top: 0.3em;
+  border-radius: 2px;
 }
 
 .align {
-  padding-right: 40%;
+  max-width: 640px;
 }
 
-h1 {
-  animation: fadein 4s;
-  -moz-animation: fadein 4s; /* Firefox */
-  -webkit-animation: fadein 4s; /* Safari and Chrome */
-  -o-animation: fadein 4s; /* Opera */
-}
-
-.page {
-  animation: fadein 4s;
-  -moz-animation: fadein 4s; /* Firefox */
-  -webkit-animation: fadein 4s; /* Safari and Chrome */
-  -o-animation: fadein 4s; /* Opera */
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-@keyframes fadein {
+/* Staggered fade-in animations */
+@keyframes fadeInUp {
   from {
-      opacity:0;
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity:1;
-  }
-}
-@-moz-keyframes fadein { /* Firefox */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
-@-o-keyframes fadein { /* Opera */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity: 1;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 0.4s;
+}
+
+/* Link hover effects */
 .about-a:hover::after,
 .about-a:hover::before {
   display: block;
@@ -144,30 +117,28 @@ h1 {
   transition: color 0.2s ease;
 }
 
+.about-a::before {
+  transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+}
+
+.about-a::after {
+  transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+}
+
 #rubrik {
-color: #139cdb;
+  color: #139cdb;
 }
 
 #rubrik::before {
-  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #acd0e0;
 }
 
-#rubrik::after {
-  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-}
-
 #lab126 {
-color: #FF9900;
+  color: #FF9900;
 }
 
 #lab126::before {
-  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #ffe0b3;
-}
-
-#lab126::after {
-  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
 }
 
 #cal {
@@ -175,86 +146,62 @@ color: #FF9900;
 }
 
 #cal::before {
-  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #e5f0f6;
 }
 
-#cal::after {
-  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-}
-
 #cs61b {
-color: #2F86EB;
+  color: #2F86EB;
 }
 
 #cs61b::before {
-  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #e9f2fd;
 }
 
-#cs61b::after {
-  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-}
-
 #golden {
-color: #FFAC3C;
+  color: #FFAC3C;
 }
 
 #golden::before {
-  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #ffedd5;
 }
 
-#golden::after {
-  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-}
-
 #ibm {
-color: #062FAD;
+  color: #062FAD;
 }
 
 #ibm::before {
-  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #C9DEFF;
 }
 
-#ibm::after {
-  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-}
-
 #regenize {
-color: #2CBE76;
+  color: #2CBE76;
 }
 
 #regenize::before {
-  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #C1F1D9;
 }
 
-#regenize::after {
-  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-}
-
 #tea {
-color: #83C868;
+  color: #83C868;
 }
 
 #tea::before {
-  -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #e9f5e4;
 }
 
-#tea::after {
-  -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+/* Logo */
+.logo img {
+  width: 40px;
 }
 
-.logo {
-  float: left;
+.logo:hover {
+  cursor: pointer;
 }
 
+/* Header */
 header {
   width: 90%;
-  padding: 40px 0 8 0;
+  padding: 40px 0 8px 0;
   margin: 0 auto;
   height: 60px;
   font-size: 16px;
@@ -263,40 +210,64 @@ header {
   position: relative;
 }
 
-.about {
-  float: right;
-  font-family: 'Open Sans', sans-serif;
-  padding: 0 0 0 20px;
-  font-size: 130%;
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.logo:hover {
-  cursor: pointer;
-  -webkit-animation: bounce .3s infinite alternate;
-  -moz-animation: bounce .3s infinite alternate;
-  animation: bounce .3s infinite alternate;
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
-.about:hover {
-  cursor: pointer;
-  -webkit-animation: bounce .3s infinite alternate;
-  -moz-animation: bounce .3s infinite alternate;
-  animation: bounce .3s infinite alternate;
+.social-icons a:hover {
+  transform: scale(1.15);
 }
 
-@-webkit-keyframes bounce {
-to { -webkit-transform: scale(1.2); }
-}
-@-moz-keyframes bounce {
-to { -moz-transform: scale(1.2); }
-}
-@keyframes bounce {
-to { transform: scale(1.2); }
+.social-icons img {
+  width: 32px;
+  height: 32px;
 }
 
+/* Footer */
 .footer {
-  position: fixed;
-  bottom: 0;
-  right: 20;
+  padding: 2rem 10%;
+  text-align: right;
 }
 
+.footer h3 {
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-padding {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 180%;
+  }
+
+  p {
+    font-size: 120%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-padding {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 150%;
+  }
+
+  p {
+    font-size: 110%;
+  }
+}
