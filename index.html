@@ -4,7 +4,8 @@
 		<title>Tina Zhao</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+		<meta name="description" content="Tina Zhao — Software Engineer at Rubrik. UC Berkeley Computer Science.">
+		<link rel="icon" type="image/png" href="assets/favicon.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,30 +13,38 @@
 	</head>
 	<body>
 		<div class="page">
-			<header class="top-bar">
-			</header>
-			<div class="about-padding">
+			<main class="about-padding">
 				<h1 class="fade-in">Hi. I'm Tina.</h1>
 				<div class="align fade-in delay-1">
-					<p>I'm a Software Engineer working at <a href="https://www.rubrik.com" class="about-a" id="rubrik">Rubrik</a>. Previously, I worked at <a href="https://amazon.jobs/en/teams/lab126/" class="about-a" id="lab126">Amazon Lab126</a>. I graduated from <a href="https://eecs.berkeley.edu/academics/undergraduate/cs-ba" class="about-a" id="cal">UC Berkeley Computer Science</a> in May 2020. During my time there, I loved to teach as a <a href="https://inst.eecs.berkeley.edu/~cs61b/sp20/" class="about-a" id="cs61b">Data Structures</a> Undergraduate Student Instructor.</p>
-					<p>I am always on the lookout for new opportunities for growth, so please reach out.</p>
-					<p><a href="https://www.linkedin.com/in/tinayzhao/" class="about-a" id="tea">Interested in meeting?</a> &#x1F375;</p>
+					<p>Software Engineer at <a href="https://www.rubrik.com" class="about-a link-rubrik" target="_blank" rel="noopener noreferrer">Rubrik</a>.</p>
+					<p class="previously-label">Previously:</p>
+					<ul class="previously">
+						<li>Software Engineer at <a href="https://www.amazon.com" class="about-a link-amazon" target="_blank" rel="noopener noreferrer">Amazon</a></li>
+						<li><a href="https://eecs.berkeley.edu/academics/undergraduate/cs-ba" class="about-a link-cal" target="_blank" rel="noopener noreferrer">UC Berkeley Computer Science</a>&nbsp;Graduate</li>
+					</ul>
+					<p class="teaching-label">I also love teaching:</p>
+					<ul class="previously">
+						<li><a href="https://inst.eecs.berkeley.edu/~cs61b/sp20/" class="about-a link-cs61b" target="_blank" rel="noopener noreferrer">Data Structures</a> uGSI at UC Berkeley</li>
+						<li>Teaching Fellow at <a href="https://www.citadel.com/careers/career-perspectives/summer-externship-expands-in-its-sophomore-year/" class="about-a link-citadel" target="_blank" rel="noopener noreferrer">Citadel Summer Externship</a></li>
+					</ul>
+					<p><a href="mailto:tinayzhao1%40gmail.com?subject=" class="about-a link-tea" aria-label="Email Tina">Let's connect</a> <img src="assets/favicon.png" alt="tea" width="22" height="22" class="tea-icon"></p>
 				</div>
-				<div class="social-icons fade-in delay-2">
-                    <a href="https://www.linkedin.com/in/tinayzhao">
-                        <img src="assets/linkedin.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://github.com/tinayzhao">
-                        <img src="assets/github.png" alt="GitHub">
-                    </a>
-					<a href="https://hackmd.io/@tinazhao">
-                        <img src="assets/hackmd.png" alt="HackMD">
-                    </a>
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/tinayzhao" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+						<img src="assets/linkedin.png" alt="LinkedIn">
+					</a>
+					<a href="https://github.com/tinayzhao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+						<img src="assets/github.png" alt="GitHub" class="icon-github">
+					</a>
+					<a href="https://hackmd.io/@tinazhao" target="_blank" rel="noopener noreferrer" aria-label="HackMD">
+						<img src="assets/hackmd.svg" alt="HackMD">
+					</a>
 				</div>
-			</div>
+			</main>
 			<footer class="footer">
-				<h3>&copy;2025 Tina Zhao</h3>
+				<small>&copy; <span id="year"></span> Tina Zhao</small>
 			</footer>
 		</div>
+		<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 	</body>
 </html>
