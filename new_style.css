@@ -353,11 +353,15 @@ p {
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+  }
+
+  .previously {
+    padding-left: 1.8em;
   }
 
   .previously li {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -371,10 +375,29 @@ p {
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .previously {
+    padding-left: 1.4em;
   }
 
   .previously li {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .social-icons img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .social-icons .icon-github {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icons a {
+    width: 38px;
+    height: 38px;
   }
 }
